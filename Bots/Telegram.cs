@@ -53,7 +53,12 @@ namespace HomeWork_9.Bots
         /// <param name="Args"></param>
         private static void BotLstner(object sendedr, tlg.Args.MessageEventArgs Args)
         {
-            botCommand[Args.Message.Text](Args);
+            if (Args.Message.Type != tlg.Types.Enums.MessageType.Text)
+            {
+                FileHelper.SaveToFile(Args.Message, botWorker);
+            }
+            else
+            { botCommand[Args.Message.Text](Args); }
         }
 
 
