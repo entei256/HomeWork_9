@@ -20,7 +20,7 @@ namespace HomeWork_9
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool DisrocdIsRun, TwitchIsRun = false;
+
         Bots.Telegram tlg;
 
         public MainWindow()
